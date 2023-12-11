@@ -12,11 +12,13 @@ const Navbar = (props) => {
                     <Link to="/">
                         
                         <p className="text-white font-bold text-sm md:text-lg">Employee Management System</p>
+                        <p className="text-white font-normal text-sm">Developed by Tharun Balaji R</p>
+
                     </Link>
                 </div>
 
                 
-                <div>
+                <div className="flex items-center"> 
                     {props.isVisible && (
                         <Link to="/change" state={{ isEdit: false }}>
                             <button className="px-4 py-1 rounded-3xl bg-white text-sky-500 font-bold shadow-2xl text-sm lg:text-base">Add Employee</button>
