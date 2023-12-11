@@ -9,7 +9,7 @@ const Table = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("https://ec2-52-66-251-140.ap-south-1.compute.amazonaws.com:8080/ems/getall");
+      const response = await fetch("http://ec2-52-66-251-140.ap-south-1.compute.amazonaws.com:8080/ems/getall");
 
       if (!response.ok) {
         throw new Error("Network response not OK");
@@ -31,7 +31,7 @@ const Table = () => {
 
   const deleteData = async (employeeId) => {
     try {
-      const response = await fetch(`https://ec2-52-66-251-140.ap-south-1.compute.amazonaws.com:8080/ems/delete/${employeeId}`, {
+      const response = await fetch(`http://ec2-52-66-251-140.ap-south-1.compute.amazonaws.com:8080/ems/delete/${employeeId}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',

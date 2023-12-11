@@ -51,7 +51,7 @@ const Change = () => {
 
     const postData = async (employeeId, employee) => {
         try {
-          const response = await fetch(`https://ec2-52-66-251-140.ap-south-1.compute.amazonaws.com:8080/ems/update/${employeeId}`, {
+          const response = await fetch(`http://ec2-52-66-251-140.ap-south-1.compute.amazonaws.com:8080/ems/update/${employeeId}`, {
             method: 'PATCH',
             headers: {
               'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const Change = () => {
 
     const addData = async(employee) => {
         try {
-            const response = await fetch("https://ec2-52-66-251-140.ap-south-1.compute.amazonaws.com:8080/ems/add", {
+            const response = await fetch("http://ec2-52-66-251-140.ap-south-1.compute.amazonaws.com:8080/ems/add", {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
