@@ -1,4 +1,4 @@
-import { Route, Switch, Routes, BrowserRouter } from "react-router-dom"
+import { Route, Routes, BrowserRouter } from "react-router-dom"
 import Home from "./components/Home";
 import Change from "./components/Change";
 
@@ -8,9 +8,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route to="/" element={<Home />} />
-          <Route to="/change" element={<Change />} />
-          <Route to="*" element={<Error />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/change" element={<Change />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
     </>
